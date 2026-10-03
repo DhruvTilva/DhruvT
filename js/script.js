@@ -1,3 +1,17 @@
+// Light/dark mode toggle (the no-flash initial value is set by the inline
+// script in <head>; this just wires up the button and persists the choice)
+var themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+	themeToggle.addEventListener('click', function () {
+		var root = document.documentElement;
+		var current = root.getAttribute('data-theme');
+		var isDark = current === 'dark' || (!current && window.matchMedia('(prefers-color-scheme: dark)').matches);
+		var next = isDark ? 'light' : 'dark';
+		root.setAttribute('data-theme', next);
+		try { localStorage.setItem('theme', next); } catch (e) {}
+	});
+}
+
 // Smooth-scroll a nav link to its matching section when already on that page
 document.querySelectorAll('.nav a[data-section]').forEach(function (link) {
 	link.addEventListener('click', function (e) {
@@ -17,7 +31,11 @@ document.querySelectorAll('.hoverable').forEach(function (el) {
 	}, { passive: true });
 });
 
-// Contact form (client-side only demo — no backend wired up)
+// Contact form — submits to Formspree (https://formspree.io) so messages
+// arrive as a real email. Replace FORMSPREE_ENDPOINT below with your own
+// form's endpoint after creating one for free at formspree.io.
+var FORMSPREE_ENDPOINT = 'https://formspree.io/f/xgavgrqa';
+
 var form = document.getElementById('contact-form');
 if (form) {
 	var nameInput = document.getElementById('name');
@@ -52,14 +70,34 @@ if (form) {
 	}
 
 	function send() {
-		if (nameInput.value.trim().length > 1) {
-			firstNameSpan.textContent = ' ' + nameInput.value.trim().split(' ')[0];
-		}
-		submitted.style.display = 'block';
-		nameInput.value = '';
-		emailInput.value = '';
-		messageInput.value = '';
-		submitted.scrollIntoView({ behavior: 'smooth' });
+		var firstName = nameInput.value.trim().split(' ')[0];
+		var formData = new FormData(form);
+
+		sendBtn.disabled = true;
+		sendBtn.value = 'Sending...';
+
+		fetch(FORMSPREE_ENDPOINT, {
+			method: 'POST',
+			headers: { 'Accept': 'application/json' },
+			body: formData
+		}).then(function (response) {
+			if (!response.ok) {
+				throw new Error('Formspree responded with an error');
+			}
+			if (firstName.length > 1) {
+				firstNameSpan.textContent = ' ' + firstName;
+			}
+			submitted.style.display = 'block';
+			nameInput.value = '';
+			emailInput.value = '';
+			messageInput.value = '';
+			submitted.scrollIntoView({ behavior: 'smooth' });
+		}).catch(function () {
+			alert("Sorry, something went wrong sending that. Please email me directly instead.");
+		}).finally(function () {
+			sendBtn.disabled = false;
+			sendBtn.value = 'Send';
+		});
 	}
 
 	sendBtn.addEventListener('click', function () {

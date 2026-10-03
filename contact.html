@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<script>
+		(function () {
+			try {
+				var saved = localStorage.getItem('theme');
+				if (saved === 'light' || saved === 'dark') {
+					document.documentElement.setAttribute('data-theme', saved);
+				}
+			} catch (e) {}
+		})();
+	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Contact | Dhruv Tilva</title>
 	<meta name="description" content="Get in touch with Dhruv Tilva.">
@@ -19,6 +29,10 @@
 			<a id="nav-contact" href="contact.html" data-section=".contact.section">Contact</a>
 			<a id="nav-about" href="about.html">About</a>
 		</nav>
+		<button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+			<svg class="icon theme-icon-sun"><use href="assets/icons.svg#icon-sun"></use></svg>
+			<svg class="icon theme-icon-moon"><use href="assets/icons.svg#icon-moon"></use></svg>
+		</button>
 		<div class="title-section">
 			<h1>Contact Me</h1>
 			<p>Hiring for AI/ML? Let's talk.</p>
@@ -30,13 +44,13 @@
 				<div class="left">
 					<form class="contact" id="contact-form" onsubmit="return false">
 						<span class="contact-label">Name</span><br>
-						<input type="text" id="name" class="input textbox" placeholder="Bruce Wayne" />
+						<input type="text" id="name" name="name" class="input textbox" placeholder="Bruce Wayne" />
 
 						<span class="contact-label">Email</span><br>
-						<input type="text" id="email" class="input textbox" placeholder="batman321@hotmail.com" />
+						<input type="text" id="email" name="email" class="input textbox" placeholder="batman321@hotmail.com" />
 
 						<span class="contact-label">Message</span><br>
-						<textarea id="message" rows="8" class="input textbox" placeholder="Let's talk about an AI/ML role."></textarea>
+						<textarea id="message" name="message" rows="8" class="input textbox" placeholder="Let's talk about an AI/ML role."></textarea>
 
 						<input type="button" value="Send" id="send" class="input button" />
 
@@ -49,23 +63,25 @@
 					</form>
 				</div>
 				<div class="right">
-					<div class="icon-wrap">
-						<a href="mailto:tilvadhruv8@gmail.com" class="icon-link">
-							<p><svg class="icon"><use href="assets/icons.svg#icon-mail"></use></svg></p>
-							<p>tilvadhruv8@gmail.com</p>
-						</a>
-					</div>
-					<div class="icon-wrap">
-						<a href="tel:+917383161715" class="icon-link">
-							<p><svg class="icon"><use href="assets/icons.svg#icon-contact"></use></svg></p>
-							<p>+91 73831 61715</p>
-						</a>
-					</div>
-					<div class="icon-wrap">
-						<a href="#" class="icon-link">
-							<p><svg class="icon"><use href="assets/icons.svg#icon-pin"></use></svg></p>
-							<p>Ahmedabad, India</p>
-						</a>
+					<div class="contact-info">
+						<div class="icon-wrap">
+							<a href="mailto:tilvadhruv8@gmail.com" class="icon-link">
+								<p><svg class="icon"><use href="assets/icons.svg#icon-mail"></use></svg></p>
+								<p>tilvadhruv8@gmail.com</p>
+							</a>
+						</div>
+						<div class="icon-wrap">
+							<a href="tel:+917383161715" class="icon-link">
+								<p><svg class="icon"><use href="assets/icons.svg#icon-contact"></use></svg></p>
+								<p>+91 73831 61715</p>
+							</a>
+						</div>
+						<div class="icon-wrap">
+							<a href="#" class="icon-link">
+								<p><svg class="icon"><use href="assets/icons.svg#icon-pin"></use></svg></p>
+								<p>Ahmedabad, India</p>
+							</a>
+						</div>
 					</div>
 				</div>
 			</div>

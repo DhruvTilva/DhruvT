@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<script>
+		(function () {
+			try {
+				var saved = localStorage.getItem('theme');
+				if (saved === 'light' || saved === 'dark') {
+					document.documentElement.setAttribute('data-theme', saved);
+				}
+			} catch (e) {}
+		})();
+	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Home | Dhruv Tilva</title>
 	<meta name="description" content="Dhruv Tilva — software engineer building AI/ML systems, RAG pipelines, and LLM-powered features.">
@@ -19,6 +29,10 @@
 			<a id="nav-contact" href="contact.html">Contact</a>
 			<a id="nav-about" href="about.html">About</a>
 		</nav>
+		<button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+			<svg class="icon theme-icon-sun"><use href="assets/icons.svg#icon-sun"></use></svg>
+			<svg class="icon theme-icon-moon"><use href="assets/icons.svg#icon-moon"></use></svg>
+		</button>
 		<div class="title-section">
 			<h1>Hi, I'm Dhruv!</h1>
 			<p>I build AI/ML systems &ndash; from RAG pipelines to ML models.</p>
@@ -32,7 +46,7 @@
 				</div>
 				<div class="text-wrap">
 					<h2>I build AI-powered systems.</h2>
-					<p>I design and ship LLM and RAG features in production &ndash; chatbots, recommendation engines, automated content generation. I'm also doing my M.Tech in AI/ML (GenAI specialization) at BITS Pilani to go deeper into the field.</p>
+					<p>I design and ship LLM and RAG features in production &ndash; chatbots, recommendation engines, automated content generation. I'm also doing my M.Tech in AI/ML (NLP specialization) at BITS Pilani to go deeper into the field.</p>
 				</div>
 			</a>
 			<a href="websites.html" class="card">

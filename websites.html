@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<script>
+		(function () {
+			try {
+				var saved = localStorage.getItem('theme');
+				if (saved === 'light' || saved === 'dark') {
+					document.documentElement.setAttribute('data-theme', saved);
+				}
+			} catch (e) {}
+		})();
+	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Work | Dhruv Tilva</title>
 	<meta name="description" content="AI/ML projects and open-source contributions by Dhruv Tilva.">
@@ -19,6 +29,10 @@
 			<a id="nav-contact" href="contact.html">Contact</a>
 			<a id="nav-about" href="about.html">About</a>
 		</nav>
+		<button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+			<svg class="icon theme-icon-sun"><use href="assets/icons.svg#icon-sun"></use></svg>
+			<svg class="icon theme-icon-moon"><use href="assets/icons.svg#icon-moon"></use></svg>
+		</button>
 		<div class="title-section">
 			<h1>My Work</h1>
 			<p>Projects I've built and open source I've contributed to.</p>

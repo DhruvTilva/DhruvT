@@ -2,6 +2,16 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<script>
+		(function () {
+			try {
+				var saved = localStorage.getItem('theme');
+				if (saved === 'light' || saved === 'dark') {
+					document.documentElement.setAttribute('data-theme', saved);
+				}
+			} catch (e) {}
+		})();
+	</script>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>About | Dhruv Tilva</title>
 	<meta name="description" content="Dhruv Tilva is a software engineer from India building AI/ML systems.">
@@ -19,6 +29,10 @@
 			<a id="nav-contact" href="contact.html">Contact</a>
 			<a id="nav-about" href="about.html" data-section=".about.section">About</a>
 		</nav>
+		<button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+			<svg class="icon theme-icon-sun"><use href="assets/icons.svg#icon-sun"></use></svg>
+			<svg class="icon theme-icon-moon"><use href="assets/icons.svg#icon-moon"></use></svg>
+		</button>
 		<div class="title-section">
 			<h1>About Me</h1>
 			<p>Engineer. Building with AI/ML.</p>
@@ -33,7 +47,7 @@
 				</div>
 				<div class="text-wrap">
 					<p class="text">Hi, I'm Dhruv Tilva, a software engineer based in Ahmedabad, India, working on AI-integrated backend systems &ndash; chatbots, RAG pipelines, and LLM-powered tools running in production.</p>
-					<p class="text">I'm also doing my M.Tech in AI/ML (GenAI specialization) at BITS Pilani, alongside my job, to go deeper into the math and models behind the systems I build.</p>
+					<p class="text">I'm also doing my M.Tech in AI/ML (NLP specialization) at BITS Pilani, alongside my job, to go deeper into the math and models behind the systems I build.</p>
 					<p class="text">Outside of work, I build my own projects &ndash; a live trading dashboard, a machine learning model for stock analysis, and contributions to open-source AI projects like Anthropic's Claude Cookbooks and Graphify. I also write about what I build.</p>
 					<p class="text">I like building things that actually work, not just things that look good in a demo. If you're hiring for an AI/ML role or just want to talk shop, feel free to reach out.</p>
 				</div>
