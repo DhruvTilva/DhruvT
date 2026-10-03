@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <rect width="600" height="400" fill="#e9e9e9"/>
+  <rect x="1" y="1" width="598" height="398" fill="none" stroke="#555" stroke-opacity="0.15" stroke-width="2"/>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="23" fill="#555" opacity="0.85">Telephone (demo photo)</text>
+  <text x="50%" y="62%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="15" fill="#555" opacity="0.6">placeholder image</text>
+</svg>

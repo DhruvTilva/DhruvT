@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <rect width="600" height="400" fill="#f3d9e6"/>
+  <rect x="1" y="1" width="598" height="398" fill="none" stroke="#9c3b63" stroke-opacity="0.15" stroke-width="2"/>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="23" fill="#9c3b63" opacity="0.85">MOM Clothing (demo photo)</text>
+  <text x="50%" y="62%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="15" fill="#9c3b63" opacity="0.6">placeholder image</text>
+</svg>

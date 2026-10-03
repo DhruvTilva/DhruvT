@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact | Kristian Windsor (Recreation)</title>
+	<meta name="description" content="Get in touch &ndash; demo content for a site recreation.">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400..700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header class="head">
+		<nav class="nav">
+			<a id="nav-home" href="index.html">Home</a>
+			<a id="nav-experience" href="experience.html">Experience</a>
+			<a id="nav-websites" href="websites.html">Websites</a>
+			<a id="nav-blog" href="blog.html">Blog</a>
+			<a id="nav-contact" href="contact.html" data-section=".contact.section">Contact</a>
+			<a id="nav-about" href="about.html">About</a>
+		</nav>
+		<div class="title-section">
+			<h1>Contact Me</h1>
+			<p>Got an idea? Let's get in touch.</p>
+		</div>
+	</header>
+	<main class="body">
+		<div class="section contact">
+			<div class="card">
+				<div class="left">
+					<form class="contact" id="contact-form" onsubmit="return false">
+						<span class="contact-label">Name</span><br>
+						<input type="text" id="name" class="input textbox" placeholder="Bruce Wayne" />
+
+						<span class="contact-label">Email</span><br>
+						<input type="text" id="email" class="input textbox" placeholder="batman321@hotmail.com" />
+
+						<span class="contact-label">Message</span><br>
+						<textarea id="message" rows="8" class="input textbox" placeholder="You look great today."></textarea>
+
+						<input type="button" value="Send" id="send" class="input button" />
+
+						<span id="no-name-no-email">You didn't put your name or your email address. Send anyways?</span>
+						<span id="no-name">You didn't put your name. Send anyways?</span>
+						<span id="no-email">You didn't put an email address. Send anyways?</span>
+						<span id="bad-email">Your email address doesn't look right. Send anyways?</span>
+						<input type="button" value="Cancel" id="send-no" class="input button yesno" />
+						<input type="button" value="Send" id="send-yes" class="input button yesno" />
+					</form>
+				</div>
+				<div class="right">
+					<div class="icon-wrap">
+						<a href="mailto:hello@example.com" class="icon-link">
+							<p><svg class="icon"><use href="assets/icons.svg#icon-mail"></use></svg></p>
+							<p>hello@example.com (demo)</p>
+						</a>
+					</div>
+					<div class="icon-wrap">
+						<a href="tel:+10000000000" class="icon-link">
+							<p><svg class="icon"><use href="assets/icons.svg#icon-contact"></use></svg></p>
+							<p>(000) 000-0000 (demo)</p>
+						</a>
+					</div>
+					<div class="icon-wrap">
+						<a href="#" class="icon-link">
+							<p><svg class="icon"><use href="assets/icons.svg#icon-pin"></use></svg></p>
+							<p>San Francisco, CA</p>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div id="submitted">
+				<p><span class="big">Thanks<span id="firstName"></span>! </span><span class="green">Your message has been submitted.</span></p>
+				<p>I'll get back to you as soon as I can.</p>
+			</div>
+		</div>
+	</main>
+	<footer class="foot">
+		<div class="icon-wrap">
+			<a href="index.html" class="icon-link">
+				<p><svg class="icon"><use href="assets/icons.svg#icon-home"></use></svg></p>
+				<p><span>Home</span></p>
+			</a>
+			<a href="experience.html" class="icon-link">
+				<p><svg class="icon"><use href="assets/icons.svg#icon-experience"></use></svg></p>
+				<p><span>Experience</span></p>
+			</a>
+			<a href="websites.html" class="icon-link">
+				<p><svg class="icon"><use href="assets/icons.svg#icon-websites"></use></svg></p>
+				<p><span>Websites</span></p>
+			</a>
+			<a href="blog.html" class="icon-link">
+				<p><svg class="icon"><use href="assets/icons.svg#icon-blog"></use></svg></p>
+				<p><span>Blog</span></p>
+			</a>
+			<a href="contact.html" class="icon-link">
+				<p><svg class="icon"><use href="assets/icons.svg#icon-contact"></use></svg></p>
+				<p><span>Contact</span></p>
+			</a>
+			<a href="about.html" class="icon-link">
+				<p><svg class="icon"><use href="assets/icons.svg#icon-about"></use></svg></p>
+				<p><span>About</span></p>
+			</a>
+		</div>
+	</footer>
+	<script src="js/script.js"></script>
+</body>
+</html>
