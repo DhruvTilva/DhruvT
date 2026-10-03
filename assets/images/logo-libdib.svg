@@ -1,6 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
-  <rect width="200" height="200" fill="#1b2e4a"/>
-  <rect x="1" y="1" width="198" height="198" fill="none" stroke="#eee" stroke-opacity="0.15" stroke-width="2"/>
-  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="7" fill="#eee" opacity="0.85">LibDib</text>
-  <text x="50%" y="62%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="5" fill="#eee" opacity="0.6">placeholder image</text>
-</svg>

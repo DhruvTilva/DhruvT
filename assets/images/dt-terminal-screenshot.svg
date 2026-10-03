@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400">
+  <rect width="640" height="400" fill="#1b1f27"/>
+  <rect x="1" y="1" width="638" height="398" fill="none" stroke="#7fe0c2" stroke-opacity="0.15" stroke-width="2"/>
+  <text x="50%" y="50%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="24" fill="#7fe0c2" opacity="0.85">DT Terminal (live demo)</text>
+  <text x="50%" y="62%" text-anchor="middle" dominant-baseline="middle" font-family="Arial, sans-serif" font-size="16" fill="#7fe0c2" opacity="0.6">placeholder image</text>
+</svg>

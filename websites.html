@@ -3,8 +3,8 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Websites | Dhruv Tilva (Recreation)</title>
-	<meta name="description" content="Websites designed and developed &ndash; demo content for a site recreation.">
+	<title>Work | Dhruv Tilva</title>
+	<meta name="description" content="AI/ML projects and open-source contributions by Dhruv Tilva.">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Assistant:wght@400..700&display=swap" rel="stylesheet">
@@ -15,67 +15,33 @@
 		<nav class="nav">
 			<a id="nav-home" href="index.html">Home</a>
 			<a id="nav-experience" href="experience.html">Experience</a>
-			<a id="nav-websites" href="websites.html" data-section=".websites.section">Websites</a>
-			<a id="nav-blog" href="blog.html">Blog</a>
+			<a id="nav-websites" href="websites.html" data-section=".websites.section">Work</a>
 			<a id="nav-contact" href="contact.html">Contact</a>
 			<a id="nav-about" href="about.html">About</a>
 		</nav>
 		<div class="title-section">
-			<h1>My Websites</h1>
-			<p>I design, develop, and operate websites in my spare time.</p>
+			<h1>My Work</h1>
+			<p>Projects I've built and open source I've contributed to.</p>
 		</div>
 	</header>
 	<main class="body">
 		<div class="section websites">
+			<h2>Projects</h2>
 			<div class="card">
 				<div class="image-wrap left image-container hoverable">
 					<div class="website-image">
-						<img src="assets/images/citethis-screenshot.svg" title="CiteThis.net" alt="CiteThis.net citation generator screenshot" />
+						<img src="assets/images/dt-terminal-screenshot.svg" title="DT Terminal" alt="DT Terminal, a live trading dashboard" />
 					</div>
 					<div class="website-info">
 						<div class="centered">
 							<div>
-								<a class="website-link" href="#">
+								<a class="website-link" href="https://trade-central.vercel.app/" target="_blank">
 									<svg class="icon"><use href="assets/icons.svg#icon-external"></use></svg>
 									Visit Website
 								</a>
 							</div>
 							<div>
-								<a class="website-link" href="blog-post.html">
-									<svg class="icon"><use href="assets/icons.svg#icon-book-open"></use></svg>
-									Read About It
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-				<div class="text-wrap right">
-					<h3 class="title">CiteThis</h3>
-					<p class="url"><a href="#">citethis.net (demo link)</a></p>
-					<p class="text">A citation generator to help students create bibliographies.</p>
-				</div>
-			</div>
-			<div class="card">
-				<div class="image-wrap left image-container hoverable">
-					<div class="website-image">
-						<img src="assets/images/password-generator-screenshot.svg" title="PassGen.site" alt="PassGen.site password generator screenshot" />
-					</div>
-					<div class="website-info">
-						<div class="centered">
-							<div>
-								<a class="website-link" href="#">
-									<svg class="icon"><use href="assets/icons.svg#icon-external"></use></svg>
-									Visit Website
-								</a>
-							</div>
-							<div>
-								<a class="website-link" href="blog-post.html">
-									<svg class="icon"><use href="assets/icons.svg#icon-book-open"></use></svg>
-									Read About It
-								</a>
-							</div>
-							<div>
-								<a class="website-link" href="#">
+								<a class="website-link" href="https://github.com/DhruvTilva" target="_blank">
 									<svg class="icon"><use href="assets/icons.svg#icon-github"></use></svg>
 									View On Github
 								</a>
@@ -84,9 +50,54 @@
 					</div>
 				</div>
 				<div class="text-wrap right">
-					<h3 class="title">Password Generator</h3>
-					<p class="url"><a href="#">passgen.site (demo link)</a></p>
-					<p class="text">A minimal password generator.</p>
+					<h3 class="title">DT Terminal</h3>
+					<p class="url"><a href="https://trade-central.vercel.app/" target="_blank">trade-central.vercel.app</a></p>
+					<p class="text">A live trading terminal dashboard I built and deployed &ndash; real-time data, a clean UI, and a good excuse to practice building something people can actually use.</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="image-wrap left image-container hoverable">
+					<div class="website-image">
+						<img src="assets/images/swing-trade-finder.svg" title="Swing Trade Finder" alt="Swing Trade Finder, a machine learning project" />
+					</div>
+					<div class="website-info">
+						<div class="centered">
+							<div>
+								<a class="website-link" href="https://github.com/DhruvTilva/swing_trade_finder" target="_blank">
+									<svg class="icon"><use href="assets/icons.svg#icon-github"></use></svg>
+									View On Github
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="text-wrap right">
+					<h3 class="title">Swing Trade Finder</h3>
+					<p class="url"><a href="https://github.com/DhruvTilva/swing_trade_finder" target="_blank">github.com/DhruvTilva/swing_trade_finder</a></p>
+					<p class="text">An end-to-end machine learning pipeline that takes years of stock price data, engineers features like moving averages and RSI, and trains a Random Forest model to estimate how likely a swing trade setup is to work out.</p>
+				</div>
+			</div>
+		</div>
+		<div class="section websites">
+			<h2>Open Source Contributions</h2>
+			<div class="card">
+				<div class="image-wrap">
+					<img src="assets/images/logo-anthropic.svg" class="partial" title="Anthropic" alt="Anthropic Claude Cookbooks logo" />
+				</div>
+				<div class="text-wrap">
+					<h3 class="title">Merged PR into Anthropic's Claude Cookbooks</h3>
+					<p class="text">Claude Cookbooks is where a lot of developers learn to build with LLMs &ndash; RAG pipelines, contextual embeddings, agent workflows. I found that the contextual-embeddings example was adding context after the text chunk instead of before it, which defeats the point of giving the model context first.</p>
+					<p class="text">I fixed the ordering and the maintainers merged it in &ndash; a small fix, but one that every developer who follows that guide now benefits from.</p>
+				</div>
+			</div>
+			<div class="card">
+				<div class="image-wrap">
+					<img src="assets/images/logo-graphify.svg" class="partial" title="Graphify" alt="Graphify logo" />
+				</div>
+				<div class="text-wrap">
+					<h3 class="title">Merged two fixes into Graphify (70k+ stars)</h3>
+					<p class="text">Graphify is an AI system that uses LLMs to analyze codebases and build a structured knowledge graph out of them. I found two bugs: a secondary LLM call path that ignored the configured timeout, and a missing config file that crashed the app with a raw stack trace instead of a clear error.</p>
+					<p class="text">Both fixes were reviewed and merged by the maintainers.</p>
 				</div>
 			</div>
 		</div>
@@ -103,11 +114,7 @@
 			</a>
 			<a href="websites.html" class="icon-link">
 				<p><svg class="icon"><use href="assets/icons.svg#icon-websites"></use></svg></p>
-				<p><span>Websites</span></p>
-			</a>
-			<a href="blog.html" class="icon-link">
-				<p><svg class="icon"><use href="assets/icons.svg#icon-blog"></use></svg></p>
-				<p><span>Blog</span></p>
+				<p><span>Work</span></p>
 			</a>
 			<a href="contact.html" class="icon-link">
 				<p><svg class="icon"><use href="assets/icons.svg#icon-contact"></use></svg></p>

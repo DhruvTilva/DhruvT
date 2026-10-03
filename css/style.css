@@ -224,6 +224,7 @@ a.card:hover {
 }
 .url a, .text-wrap a {
 	border-bottom: 1px solid var(--text-color);
+	overflow-wrap: anywhere;
 }
 a:hover, .a-hovering {
 	color: var(--accent);
